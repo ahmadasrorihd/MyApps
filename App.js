@@ -1,53 +1,17 @@
-import React, {Component} from 'react';
-import {Text, View, Image, TextInput, Button} from 'react-native';
+import React from 'react';
+import {View, ScrollView} from 'react-native';
+import SampleComponent from './SampleComponent';
+import StylingReactNativeComponent from './StylingReactNativeComponent';
 
 const App = () => {
   return (
     <View>
-      <View style={{width: 80, height: 80, backgroundColor: '#e74c3c'}} />
-      <NamaAku />
-      <Text>1</Text>
-      <Text>2</Text>
-      <Text>3</Text>
-      <Foto />
-      <TextInput style={{borderWidth: 1}} />
-      <BoxGreen />
-      <Profile />
+      <ScrollView>
+        <SampleComponent />
+        <StylingReactNativeComponent />
+      </ScrollView>
     </View>
   );
 };
-
-const NamaAku = () => {
-  return <Text>AhmadAsrori</Text>;
-};
-
-const Foto = () => {
-  return (
-    <Image
-      source={{uri: 'https://placeimg.com/100/100/tech'}}
-      style={{width: 100, height: 100}}
-    />
-  );
-};
-
-class BoxGreen extends Component {
-  render() {
-    return <Text>ini text dari boxGreen</Text>;
-  }
-}
-
-class Profile extends Component {
-  render() {
-    return (
-      <View>
-        <Image
-          source={{uri: 'https://placeimg.com/100/100/people'}}
-          style={{width: 100, height: 100, borderRadius: 50}}
-        />
-        <Text>ini hewan</Text>
-      </View>
-    );
-  }
-}
 
 export default App;
